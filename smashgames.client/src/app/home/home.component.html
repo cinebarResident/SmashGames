@@ -1,0 +1,33 @@
+<!--<pre>{{ studio$ | async | json }}</pre>-->
+
+
+<nav class="navbar">
+  <a href="/" class="branding">Smash Games</a>
+  <ul class="nav-links">
+    <li class="nav-item"><a routerLink="/">Home</a></li>
+    <li class="nav-item"><a routerLink="/about">About Us</a></li>
+    <li class="nav-item"><a routerLink="/game">Our Games</a></li>
+    <li class="nav-item"><a routerLink="/contact">Contact Us</a></li>
+  </ul>
+</nav>
+<div class="container">
+  <main class="content">
+    <div class="jumbotron">
+      <img src="assets/images/SmashGamesLogo-short.png" alt="Smash Game Logo" class="billboard" />
+    </div>
+    <div class="deck">
+      <h2>Welcome to {{ (studio$ | async)!.name }} </h2>
+      <p> {{ (studio$ | async)!.description }}</p>
+
+      <ul class="list-group">
+        <li class="list-item" *ngFor="let game of (games$ | async)">{{ game.title }} </li>
+      </ul>
+    </div>
+    <div class="centered">
+      <p>Founded by a team of seasoned game developers and passionate gamers, Smash Games is the result of a shared dream to create games that challenge and excite players. With years of experience in the industry, our team knows what it takes to create games that keep players engaged, and we're committed to bringing that expertise to every game we create.</p>
+      <p>At Smash Games, we're driven by a love of gaming and a desire to push the boundaries of what's possible in the industry. Our team is constantly experimenting with new technology and gameplay mechanics, always striving to create games that are as innovative as they are entertaining.</p>
+      <p>But at the end of the day, what matters most to us is our players. We're dedicated to creating games that provide an escape, an opportunity to let go of the stresses of daily life and lose oneself in a world of high-octane action and adventure. We believe that gaming is more than just entertainment – it's a way to connect with others, to explore new worlds, and to experience the thrill of the unknown.</p>
+      <p>So whether you're a seasoned gamer or new to the world of video games, we invite you to join us on this journey. Let Smash Games take you on an adventure that will leave you breathless and energized – we promise, it'll be an experience you won't soon forget.</p>
+    </div>
+  </main>
+</div>
